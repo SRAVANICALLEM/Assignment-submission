@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class Avenger {
+	String name,weapon,planet;
+	int age;
+	float power;
+	Scanner sc=new Scanner(System.in);
+	public void getDetails() {
+		System.out.println("enter avenger name");
+		name=sc.next();
+		System.out.println("enter the age");
+		age=sc.nextInt();
+		System.out.println("enter the power");
+		power=sc.nextFloat();
+		System.out.println("enter the weapon");
+		weapon=sc.next();
+		System.out.println("enter the planet");
+		planet=sc.next();
+	}
+	public void displayDetails() {
+		System.out.println(name);
+		System.out.println(age+" years");
+		System.out.println(power+" watts");
+		System.out.println(weapon);
+		System.out.println(planet);
+	}	
+}
+public class Main {
+
+	public static void main(String[] args) {
+		Avenger[] Avengers=new Avenger[5];    
+		for(int i=0;i<5;i++) {
+			Avengers[i]=new Avenger();
+			Avengers[i].getDetails();
+		}
+		 for(int i=0;i<5;i++) {
+			 Avengers[i].displayDetails();
+		 }
+
+	}
+
+}
