@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		int Computer,English,Maths,Science,Social;
+		float Total,Percentage;
+		Scanner sc =new Scanner(System.in) ;
+		System.out.println("enter Computer marks");
+		Computer=sc.nextInt();
+		System.out.println("enter English marks");
+		English=sc.nextInt();
+		System.out.println("enter Maths marks");
+		Maths=sc.nextInt();
+		System.out.println("enter Science marks");
+		Science=sc.nextInt();
+		System.out.println("enter Social marks");
+		Social=sc.nextInt();
+		Total=Computer+English+Maths+Science+Social;
+		Percentage=((Total)/(500))*100;
+		if(Percentage<35)
+			System.out.println("you have failed :(");
+		else {
+		if(Percentage>=75 && Percentage<=100) {
+			System.out.println("you got A grade with "+Percentage+" Percentage");
+		}
+		else if(Percentage>=60 && Percentage<75)
+			System.out.println("you got B grade with "+Percentage+" Percentage");
+		else if(Percentage>=50 && Percentage<60)
+			System.out.println("you got C grade with "+Percentage+" Percentage");
+		else if(Percentage>=35 && Percentage<50)					
+		    System.out.println("you got D grade with "+Percentage+" Percentage");
+		else 
+			System.out.println("data is incorrect");		
+		}	
+
+	}
+
+}

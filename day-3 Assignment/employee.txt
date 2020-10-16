@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		String name;
+		int birthdate,birthmonth,birthyear,currentyear,Age,monthlysalary,Annualsalary;
+		float Tax_amount=0;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the employee name");
+		name=sc.next();
+		System.out.println("enter the birth date");
+		birthdate=sc.nextInt();
+		System.out.println("enter the birth month");
+		birthmonth=sc.nextInt();
+		System.out.println("enter the birth year");
+		birthyear=sc.nextInt();
+		System.out.println("enter the current year");
+		currentyear=sc.nextInt();
+		System.out.println("enter the monthly salary");
+		monthlysalary=sc.nextInt();
+		Age=currentyear-birthyear;
+		Annualsalary=monthlysalary*12;
+		if(Annualsalary>500000)
+			Tax_amount=Annualsalary*(20.0f/100);
+		else if(Annualsalary>400000 && Annualsalary<500000)
+			Tax_amount=Annualsalary*(15.0f/100);
+		else if(Annualsalary>300000 && Annualsalary<400000)
+			Tax_amount=Annualsalary*(10.0f/100);
+		else if(Annualsalary>200000 && Annualsalary<300000)
+			Tax_amount=Annualsalary*(5.0f/100);
+		else
+			System.out.println("no need to pay the tax");
+		System.out.println(name+"  "+Age+" years"+"  "+Annualsalary+"  "+Tax_amount);
+
+	}
+
+}
